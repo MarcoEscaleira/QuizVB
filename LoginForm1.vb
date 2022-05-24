@@ -1,4 +1,6 @@
 Public Class LoginForm1
+    Dim binding_source As New BindingSource()
+    Dim data_table As New DataTable()
 
     ' TODO: Insert code to perform custom authentication using the provided username and password 
     ' (See https://go.microsoft.com/fwlink/?LinkId=35339).  
@@ -16,4 +18,11 @@ Public Class LoginForm1
         Me.Close()
     End Sub
 
+    Private Sub LoginForm1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.DataGridView1.DataSource = Me.binding_source
+    End Sub
+
+    Private Sub UsernameTextBox_TextChanged(sender As Object, e As EventArgs) Handles UsernameTextBox.TextChanged
+
+    End Sub
 End Class
