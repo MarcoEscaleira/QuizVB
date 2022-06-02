@@ -15,7 +15,7 @@ Public Class LoginForm
 
         Try
             Using con As New SqlConnection(conString)
-                Dim command As New SqlCommand(String.Format("SELECT user_id, user_password FROM Users WHERE user_username = '{0}'", usernameText), con)
+                Dim command As New SqlCommand(String.Format("SELECT user_id, user_password, user_username FROM Users WHERE user_username = '{0}'", usernameText), con)
 
                 con.Open()
 
@@ -23,29 +23,29 @@ Public Class LoginForm
 
                 Dim hasFoundUser = False
 
-                Try
-                    While reader.Read()
+                While reader.Read()
+                    If reader(1) = passwordText Then
+                        MsgBox("Login successfull", MsgBoxStyle.Information)
 
-                        If reader(1) = passwordText Then
-                            MsgBox("Login successfull", MsgBoxStyle.Information)
-                        Else
-                            MsgBox("Password is incorrect.", MsgBoxStyle.Critical)
-                        End If
-                        hasFoundUser = True
-                    End While
+                        My.Settings.userid = reader(0).ToString()
+                        My.Settings.username = reader(2).ToString()
+                        My.Settings.Save()
 
-                    If hasFoundUser = False Then
-                        MsgBox("User not found.", MsgBoxStyle.Critical)
+
+                    Else
+                        MsgBox("Password is incorrect.", MsgBoxStyle.Critical)
                     End If
-                Catch ex As Exception
-                    MsgBox("Something went wrong...", ex.Message, MsgBoxStyle.Critical)
-                End Try
+                    hasFoundUser = True
+                End While
 
+                If hasFoundUser = False Then
+                    MsgBox("User not found.", MsgBoxStyle.Critical)
+                End If
 
                 con.Close()
             End Using
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error in getting user data")
+            MsgBox("Something went wrong...", ex.Message, MsgBoxStyle.Critical)
         End Try
 
     End Sub

@@ -23,38 +23,39 @@ Partial Class indexForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.userIdTextBox = New System.Windows.Forms.TextBox()
+        Me.userTextBox = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.logoutBtn = New System.Windows.Forms.Button()
+        Me.goToRegistration = New System.Windows.Forms.Button()
         Me.goToHome = New System.Windows.Forms.Button()
         Me.goToLogin = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.goToRegistration = New System.Windows.Forms.Button()
-        Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.userIdTextBox)
         Me.Panel1.Location = New System.Drawing.Point(191, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(916, 732)
         Me.Panel1.TabIndex = 0
         '
-        'userIdTextBox
+        'userTextBox
         '
-        Me.userIdTextBox.BackColor = System.Drawing.Color.LightGray
-        Me.userIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.userIdTextBox.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.userIdTextBox.Location = New System.Drawing.Point(3, 707)
-        Me.userIdTextBox.Name = "userIdTextBox"
-        Me.userIdTextBox.Size = New System.Drawing.Size(160, 22)
-        Me.userIdTextBox.TabIndex = 4
-        Me.userIdTextBox.Visible = False
+        Me.userTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.userTextBox.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.userTextBox.Location = New System.Drawing.Point(10, 665)
+        Me.userTextBox.Name = "userTextBox"
+        Me.userTextBox.ReadOnly = True
+        Me.userTextBox.Size = New System.Drawing.Size(160, 22)
+        Me.userTextBox.TabIndex = 4
+        Me.userTextBox.Visible = False
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel2.Controls.Add(Me.logoutBtn)
+        Me.Panel2.Controls.Add(Me.userTextBox)
         Me.Panel2.Controls.Add(Me.goToRegistration)
         Me.Panel2.Controls.Add(Me.goToHome)
         Me.Panel2.Controls.Add(Me.goToLogin)
@@ -63,6 +64,26 @@ Partial Class indexForm
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(183, 732)
         Me.Panel2.TabIndex = 4
+        '
+        'logoutBtn
+        '
+        Me.logoutBtn.Location = New System.Drawing.Point(10, 693)
+        Me.logoutBtn.Name = "logoutBtn"
+        Me.logoutBtn.Size = New System.Drawing.Size(160, 23)
+        Me.logoutBtn.TabIndex = 5
+        Me.logoutBtn.Text = "Logout"
+        Me.logoutBtn.UseVisualStyleBackColor = True
+        Me.logoutBtn.Visible = False
+        '
+        'goToRegistration
+        '
+        Me.goToRegistration.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.goToRegistration.Location = New System.Drawing.Point(43, 88)
+        Me.goToRegistration.Name = "goToRegistration"
+        Me.goToRegistration.Size = New System.Drawing.Size(88, 32)
+        Me.goToRegistration.TabIndex = 4
+        Me.goToRegistration.Text = "Register"
+        Me.goToRegistration.UseVisualStyleBackColor = True
         '
         'goToHome
         '
@@ -96,16 +117,6 @@ Partial Class indexForm
         Me.Button1.TabIndex = 0
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'goToRegistration
-        '
-        Me.goToRegistration.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.goToRegistration.Location = New System.Drawing.Point(43, 88)
-        Me.goToRegistration.Name = "goToRegistration"
-        Me.goToRegistration.Size = New System.Drawing.Size(88, 32)
-        Me.goToRegistration.TabIndex = 4
-        Me.goToRegistration.Text = "Register"
-        Me.goToRegistration.UseVisualStyleBackColor = True
-        '
         'indexForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -113,12 +124,10 @@ Partial Class indexForm
         Me.ClientSize = New System.Drawing.Size(1106, 735)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.Name = "indexForm"
         Me.Text = "Quizzly"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -128,6 +137,7 @@ Partial Class indexForm
     Friend WithEvents goToLogin As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents goToHome As Button
-    Friend WithEvents userIdTextBox As TextBox
+    Friend WithEvents userTextBox As TextBox
     Friend WithEvents goToRegistration As Button
+    Friend WithEvents logoutBtn As Button
 End Class

@@ -67,13 +67,25 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("ola")>  _
-        Public Property user_id() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property userid() As String
             Get
-                Return CType(Me("user_id"),String)
+                Return CType(Me("userid"),String)
             End Get
             Set
-                Me("user_id") = value
+                Me("userid") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property username() As String
+            Get
+                Return CType(Me("username"),String)
+            End Get
+            Set
+                Me("username") = value
             End Set
         End Property
     End Class
