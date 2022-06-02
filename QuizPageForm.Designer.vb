@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class QuizPageForm2
+Partial Class QuizPageForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,11 +22,7 @@ Partial Class QuizPageForm2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(QuizPageForm2))
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(QuizPageForm))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
@@ -35,58 +31,8 @@ Partial Class QuizPageForm2
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(176, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Button5)
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Location = New System.Drawing.Point(3, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(272, 739)
-        Me.Panel1.TabIndex = 4
-        '
-        'Button2
-        '
-        Me.Button2.AutoEllipsis = True
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ForeColor = System.Drawing.Color.Transparent
-        Me.Button2.Location = New System.Drawing.Point(10, 644)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(41, 44)
-        Me.Button2.TabIndex = 2
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.AutoSize = True
-        Me.Button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Nirmala UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button5.Location = New System.Drawing.Point(10, 12)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(133, 25)
-        Me.Button5.TabIndex = 1
-        Me.Button5.Text = "example@gmail.com"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.AutoEllipsis = True
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.Transparent
-        Me.Button1.Location = New System.Drawing.Point(10, 643)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(41, 44)
-        Me.Button1.TabIndex = 0
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Panel2
         '
@@ -161,7 +107,7 @@ Partial Class QuizPageForm2
         Me.Panel4.Size = New System.Drawing.Size(631, 2)
         Me.Panel4.TabIndex = 12
         '
-        'QuizPageForm2
+        'QuizPageForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -174,21 +120,13 @@ Partial Class QuizPageForm2
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
-        Me.Name = "QuizPageForm2"
+        Me.Name = "QuizPageForm"
         Me.Text = "Form2"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Button3 As Button
     Friend WithEvents RichTextBox1 As RichTextBox

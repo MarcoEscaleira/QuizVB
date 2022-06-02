@@ -33,7 +33,7 @@ Partial Class test
         Me.DataGridView1.Location = New System.Drawing.Point(92, 85)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(632, 319)
         Me.DataGridView1.TabIndex = 0
         '
         'Button1
