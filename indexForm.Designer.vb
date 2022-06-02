@@ -23,13 +23,12 @@ Partial Class indexForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.userTextBox = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.UserLabel = New System.Windows.Forms.Label()
         Me.logoutBtn = New System.Windows.Forms.Button()
         Me.goToRegistration = New System.Windows.Forms.Button()
         Me.goToHome = New System.Windows.Forms.Button()
         Me.goToLogin = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -40,30 +39,28 @@ Partial Class indexForm
         Me.Panel1.Size = New System.Drawing.Size(916, 732)
         Me.Panel1.TabIndex = 0
         '
-        'userTextBox
-        '
-        Me.userTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.userTextBox.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.userTextBox.Location = New System.Drawing.Point(10, 665)
-        Me.userTextBox.Name = "userTextBox"
-        Me.userTextBox.ReadOnly = True
-        Me.userTextBox.Size = New System.Drawing.Size(160, 22)
-        Me.userTextBox.TabIndex = 4
-        Me.userTextBox.Visible = False
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel2.Controls.Add(Me.UserLabel)
         Me.Panel2.Controls.Add(Me.logoutBtn)
-        Me.Panel2.Controls.Add(Me.userTextBox)
         Me.Panel2.Controls.Add(Me.goToRegistration)
         Me.Panel2.Controls.Add(Me.goToHome)
         Me.Panel2.Controls.Add(Me.goToLogin)
-        Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Location = New System.Drawing.Point(2, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(183, 732)
         Me.Panel2.TabIndex = 4
+        '
+        'UserLabel
+        '
+        Me.UserLabel.AutoSize = True
+        Me.UserLabel.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.UserLabel.Location = New System.Drawing.Point(10, 658)
+        Me.UserLabel.Name = "UserLabel"
+        Me.UserLabel.Size = New System.Drawing.Size(0, 20)
+        Me.UserLabel.TabIndex = 6
+        Me.UserLabel.Visible = False
         '
         'logoutBtn
         '
@@ -105,18 +102,6 @@ Partial Class indexForm
         Me.goToLogin.Text = "Login"
         Me.goToLogin.UseVisualStyleBackColor = True
         '
-        'Button1
-        '
-        Me.Button1.AutoEllipsis = True
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.Transparent
-        Me.Button1.Location = New System.Drawing.Point(10, 643)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(41, 44)
-        Me.Button1.TabIndex = 0
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'indexForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -135,9 +120,8 @@ Partial Class indexForm
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents goToLogin As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents goToHome As Button
-    Friend WithEvents userTextBox As TextBox
     Friend WithEvents goToRegistration As Button
     Friend WithEvents logoutBtn As Button
+    Friend WithEvents UserLabel As Label
 End Class

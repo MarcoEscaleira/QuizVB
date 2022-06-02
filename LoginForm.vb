@@ -31,7 +31,8 @@ Public Class LoginForm
                         My.Settings.username = reader(2).ToString()
                         My.Settings.Save()
 
-
+                        My.Forms.indexForm.loadSession()
+                        My.Forms.indexForm.SwitchPanel(LandingForm)
                     Else
                         MsgBox("Password is incorrect.", MsgBoxStyle.Critical)
                     End If
