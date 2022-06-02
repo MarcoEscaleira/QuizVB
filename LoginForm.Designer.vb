@@ -46,14 +46,15 @@ Partial Class LoginForm
         Me.LogoPictureBox.Image = Global.QuizProject.My.Resources.Resources.fadeBackgroundd
         Me.LogoPictureBox.Location = New System.Drawing.Point(0, 0)
         Me.LogoPictureBox.Name = "LogoPictureBox"
-        Me.LogoPictureBox.Size = New System.Drawing.Size(463, 718)
+        Me.LogoPictureBox.Size = New System.Drawing.Size(463, 733)
+        Me.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.LogoPictureBox.TabIndex = 0
         Me.LogoPictureBox.TabStop = False
         '
         'UsernameLabel
         '
         Me.UsernameLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.UsernameLabel.Location = New System.Drawing.Point(585, 245)
+        Me.UsernameLabel.Location = New System.Drawing.Point(585, 241)
         Me.UsernameLabel.Name = "UsernameLabel"
         Me.UsernameLabel.Size = New System.Drawing.Size(220, 23)
         Me.UsernameLabel.TabIndex = 0
@@ -63,7 +64,7 @@ Partial Class LoginForm
         'PasswordLabel
         '
         Me.PasswordLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.PasswordLabel.Location = New System.Drawing.Point(585, 309)
+        Me.PasswordLabel.Location = New System.Drawing.Point(585, 323)
         Me.PasswordLabel.Name = "PasswordLabel"
         Me.PasswordLabel.Size = New System.Drawing.Size(220, 23)
         Me.PasswordLabel.TabIndex = 2
@@ -86,7 +87,7 @@ Partial Class LoginForm
         Me.PasswordTextBox.BackColor = System.Drawing.Color.WhiteSmoke
         Me.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PasswordTextBox.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.PasswordTextBox.Location = New System.Drawing.Point(585, 335)
+        Me.PasswordTextBox.Location = New System.Drawing.Point(585, 354)
         Me.PasswordTextBox.MaxLength = 50
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -98,7 +99,7 @@ Partial Class LoginForm
         '
         Me.OK.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.OK.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.OK.Location = New System.Drawing.Point(585, 383)
+        Me.OK.Location = New System.Drawing.Point(585, 419)
         Me.OK.Name = "OK"
         Me.OK.Size = New System.Drawing.Size(94, 37)
         Me.OK.TabIndex = 4
@@ -109,7 +110,7 @@ Partial Class LoginForm
         Me.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Cancel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Cancel.Location = New System.Drawing.Point(711, 383)
+        Me.Cancel.Location = New System.Drawing.Point(711, 419)
         Me.Cancel.Name = "Cancel"
         Me.Cancel.Size = New System.Drawing.Size(94, 37)
         Me.Cancel.TabIndex = 5
@@ -122,7 +123,7 @@ Partial Class LoginForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.CancelButton = Me.Cancel
-        Me.ClientSize = New System.Drawing.Size(900, 693)
+        Me.ClientSize = New System.Drawing.Size(929, 732)
         Me.Controls.Add(Me.Cancel)
         Me.Controls.Add(Me.OK)
         Me.Controls.Add(Me.PasswordTextBox)

@@ -40,7 +40,7 @@ Partial Class LandingForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(246, 649)
+        Me.Label1.Location = New System.Drawing.Point(260, 649)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(0, 27)
         Me.Label1.TabIndex = 0
@@ -49,7 +49,7 @@ Partial Class LandingForm
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(107, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(97, 299)
+        Me.Button2.Location = New System.Drawing.Point(111, 308)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(208, 141)
         Me.Button2.TabIndex = 2
@@ -60,7 +60,7 @@ Partial Class LandingForm
         '
         Me.Panel2.BackColor = System.Drawing.Color.SlateBlue
         Me.Panel2.BackgroundImage = Global.QuizProject.My.Resources.Resources.banner
-        Me.Panel2.Location = New System.Drawing.Point(97, 0)
+        Me.Panel2.Location = New System.Drawing.Point(111, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(710, 217)
         Me.Panel2.TabIndex = 4
@@ -69,7 +69,7 @@ Partial Class LandingForm
         '
         Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(346, 299)
+        Me.Button3.Location = New System.Drawing.Point(361, 308)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(208, 141)
         Me.Button3.TabIndex = 5
@@ -80,7 +80,7 @@ Partial Class LandingForm
         '
         Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Location = New System.Drawing.Point(599, 299)
+        Me.Button4.Location = New System.Drawing.Point(613, 308)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(208, 141)
         Me.Button4.TabIndex = 6
@@ -93,7 +93,7 @@ Partial Class LandingForm
         Me.FlowLayoutPanel1.Controls.Add(Me.ListView1)
         Me.FlowLayoutPanel1.Controls.Add(Me.Label2)
         Me.FlowLayoutPanel1.Controls.Add(Me.ListBox1)
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(97, 513)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(111, 524)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(710, 207)
         Me.FlowLayoutPanel1.TabIndex = 7
@@ -132,7 +132,7 @@ Partial Class LandingForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(916, 732)
+        Me.ClientSize = New System.Drawing.Size(929, 732)
         Me.ControlBox = False
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.Label1)

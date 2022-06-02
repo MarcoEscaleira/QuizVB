@@ -34,11 +34,12 @@ Partial Class RegistrationForm
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Birthday = New System.Windows.Forms.DateTimePicker()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(536, 483)
+        Me.Button1.Location = New System.Drawing.Point(594, 523)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 0
@@ -47,7 +48,7 @@ Partial Class RegistrationForm
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(651, 483)
+        Me.Button2.Location = New System.Drawing.Point(709, 523)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 1
@@ -56,28 +57,28 @@ Partial Class RegistrationForm
         '
         'UserName
         '
-        Me.UserName.Location = New System.Drawing.Point(536, 154)
+        Me.UserName.Location = New System.Drawing.Point(594, 194)
         Me.UserName.Name = "UserName"
         Me.UserName.Size = New System.Drawing.Size(189, 23)
         Me.UserName.TabIndex = 2
         '
         'Mail
         '
-        Me.Mail.Location = New System.Drawing.Point(537, 215)
+        Me.Mail.Location = New System.Drawing.Point(595, 255)
         Me.Mail.Name = "Mail"
         Me.Mail.Size = New System.Drawing.Size(189, 23)
         Me.Mail.TabIndex = 3
         '
         'PassCon
         '
-        Me.PassCon.Location = New System.Drawing.Point(537, 412)
+        Me.PassCon.Location = New System.Drawing.Point(595, 452)
         Me.PassCon.Name = "PassCon"
         Me.PassCon.Size = New System.Drawing.Size(189, 23)
         Me.PassCon.TabIndex = 5
         '
         'Password
         '
-        Me.Password.Location = New System.Drawing.Point(536, 350)
+        Me.Password.Location = New System.Drawing.Point(594, 390)
         Me.Password.Name = "Password"
         Me.Password.Size = New System.Drawing.Size(190, 23)
         Me.Password.TabIndex = 6
@@ -85,7 +86,7 @@ Partial Class RegistrationForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(534, 136)
+        Me.Label1.Location = New System.Drawing.Point(591, 171)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(60, 15)
         Me.Label1.TabIndex = 7
@@ -94,7 +95,7 @@ Partial Class RegistrationForm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(536, 197)
+        Me.Label2.Location = New System.Drawing.Point(594, 233)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(41, 15)
         Me.Label2.TabIndex = 8
@@ -103,7 +104,7 @@ Partial Class RegistrationForm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(537, 268)
+        Me.Label3.Location = New System.Drawing.Point(591, 302)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(78, 15)
         Me.Label3.TabIndex = 9
@@ -112,7 +113,7 @@ Partial Class RegistrationForm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(536, 332)
+        Me.Label4.Location = New System.Drawing.Point(594, 367)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(57, 15)
         Me.Label4.TabIndex = 10
@@ -121,7 +122,7 @@ Partial Class RegistrationForm
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(538, 394)
+        Me.Label5.Location = New System.Drawing.Point(594, 430)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(104, 15)
         Me.Label5.TabIndex = 11
@@ -129,16 +130,26 @@ Partial Class RegistrationForm
         '
         'Birthday
         '
-        Me.Birthday.Location = New System.Drawing.Point(536, 286)
+        Me.Birthday.Location = New System.Drawing.Point(594, 326)
         Me.Birthday.Name = "Birthday"
         Me.Birthday.Size = New System.Drawing.Size(191, 23)
         Me.Birthday.TabIndex = 12
+        '
+        'Panel1
+        '
+        Me.Panel1.BackgroundImage = Global.QuizProject.My.Resources.Resources.fadeBackgroundd
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(441, 733)
+        Me.Panel1.TabIndex = 13
         '
         'RegistrationForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(900, 693)
+        Me.ClientSize = New System.Drawing.Size(929, 732)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Birthday)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -172,4 +183,5 @@ Partial Class RegistrationForm
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Birthday As DateTimePicker
+    Friend WithEvents Panel1 As Panel
 End Class

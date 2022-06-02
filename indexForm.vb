@@ -18,6 +18,7 @@
             UserLabel.Visible = True
             UserLabel.Text = "Hello " + My.Settings.username + " !"
             logoutBtn.Visible = True
+            profileBtn.Visible = True
         End If
     End Sub
 
@@ -39,6 +40,10 @@
         SwitchPanel(RegistrationForm)
     End Sub
 
+    Private Sub profileBtn_Click(sender As Object, e As EventArgs) Handles profileBtn.Click
+        SwitchPanel(AccountForm)
+    End Sub
+
     Private Sub logoutBtn_Click(sender As Object, e As EventArgs) Handles logoutBtn.Click
         My.Settings.userid = ""
         My.Settings.username = ""
@@ -48,7 +53,9 @@
         goToRegistration.Visible = True
         UserLabel.Visible = False
         logoutBtn.Visible = False
+        profileBtn.Visible = False
 
         MsgBox("Logged out with success!", MsgBoxStyle.Information)
     End Sub
+
 End Class

@@ -24,6 +24,7 @@ Partial Class indexForm
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.profileBtn = New System.Windows.Forms.Button()
         Me.UserLabel = New System.Windows.Forms.Label()
         Me.logoutBtn = New System.Windows.Forms.Button()
         Me.goToRegistration = New System.Windows.Forms.Button()
@@ -34,14 +35,15 @@ Partial Class indexForm
         '
         'Panel1
         '
-        Me.Panel1.Location = New System.Drawing.Point(191, 0)
+        Me.Panel1.Location = New System.Drawing.Point(178, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(916, 732)
+        Me.Panel1.Size = New System.Drawing.Size(929, 732)
         Me.Panel1.TabIndex = 0
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel2.Controls.Add(Me.profileBtn)
         Me.Panel2.Controls.Add(Me.UserLabel)
         Me.Panel2.Controls.Add(Me.logoutBtn)
         Me.Panel2.Controls.Add(Me.goToRegistration)
@@ -52,11 +54,22 @@ Partial Class indexForm
         Me.Panel2.Size = New System.Drawing.Size(183, 732)
         Me.Panel2.TabIndex = 4
         '
+        'profileBtn
+        '
+        Me.profileBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.profileBtn.Location = New System.Drawing.Point(10, 653)
+        Me.profileBtn.Name = "profileBtn"
+        Me.profileBtn.Size = New System.Drawing.Size(160, 32)
+        Me.profileBtn.TabIndex = 7
+        Me.profileBtn.Text = "My profile"
+        Me.profileBtn.UseVisualStyleBackColor = True
+        Me.profileBtn.Visible = False
+        '
         'UserLabel
         '
         Me.UserLabel.AutoSize = True
         Me.UserLabel.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.UserLabel.Location = New System.Drawing.Point(10, 658)
+        Me.UserLabel.Location = New System.Drawing.Point(10, 620)
         Me.UserLabel.Name = "UserLabel"
         Me.UserLabel.Size = New System.Drawing.Size(0, 20)
         Me.UserLabel.TabIndex = 6
@@ -64,9 +77,10 @@ Partial Class indexForm
         '
         'logoutBtn
         '
-        Me.logoutBtn.Location = New System.Drawing.Point(10, 693)
+        Me.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.logoutBtn.Location = New System.Drawing.Point(10, 691)
         Me.logoutBtn.Name = "logoutBtn"
-        Me.logoutBtn.Size = New System.Drawing.Size(160, 23)
+        Me.logoutBtn.Size = New System.Drawing.Size(160, 32)
         Me.logoutBtn.TabIndex = 5
         Me.logoutBtn.Text = "Logout"
         Me.logoutBtn.UseVisualStyleBackColor = True
@@ -74,6 +88,7 @@ Partial Class indexForm
         '
         'goToRegistration
         '
+        Me.goToRegistration.Cursor = System.Windows.Forms.Cursors.Hand
         Me.goToRegistration.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.goToRegistration.Location = New System.Drawing.Point(43, 88)
         Me.goToRegistration.Name = "goToRegistration"
@@ -84,6 +99,7 @@ Partial Class indexForm
         '
         'goToHome
         '
+        Me.goToHome.Cursor = System.Windows.Forms.Cursors.Hand
         Me.goToHome.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.goToHome.Location = New System.Drawing.Point(43, 12)
         Me.goToHome.Name = "goToHome"
@@ -94,6 +110,7 @@ Partial Class indexForm
         '
         'goToLogin
         '
+        Me.goToLogin.Cursor = System.Windows.Forms.Cursors.Hand
         Me.goToLogin.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.goToLogin.Location = New System.Drawing.Point(43, 50)
         Me.goToLogin.Name = "goToLogin"
@@ -109,6 +126,7 @@ Partial Class indexForm
         Me.ClientSize = New System.Drawing.Size(1106, 735)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "indexForm"
         Me.Text = "Quizzly"
         Me.Panel2.ResumeLayout(False)
@@ -124,4 +142,5 @@ Partial Class indexForm
     Friend WithEvents goToRegistration As Button
     Friend WithEvents logoutBtn As Button
     Friend WithEvents UserLabel As Label
+    Friend WithEvents profileBtn As Button
 End Class

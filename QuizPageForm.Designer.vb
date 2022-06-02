@@ -37,7 +37,7 @@ Partial Class QuizPageForm
         'Panel2
         '
         Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
-        Me.Panel2.Location = New System.Drawing.Point(320, 49)
+        Me.Panel2.Location = New System.Drawing.Point(232, 35)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(599, 209)
         Me.Panel2.TabIndex = 5
@@ -46,7 +46,7 @@ Partial Class QuizPageForm
         '
         Me.Button3.BackColor = System.Drawing.Color.Orange
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button3.Location = New System.Drawing.Point(770, 326)
+        Me.Button3.Location = New System.Drawing.Point(682, 312)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(149, 116)
         Me.Button3.TabIndex = 6
@@ -55,7 +55,7 @@ Partial Class QuizPageForm
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(320, 296)
+        Me.RichTextBox1.Location = New System.Drawing.Point(232, 282)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(356, 182)
         Me.RichTextBox1.TabIndex = 8
@@ -64,7 +64,7 @@ Partial Class QuizPageForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(320, 278)
+        Me.Label1.Location = New System.Drawing.Point(232, 264)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 15)
         Me.Label1.TabIndex = 9
@@ -76,7 +76,7 @@ Partial Class QuizPageForm
         Me.ListBox1.ImeMode = System.Windows.Forms.ImeMode.[On]
         Me.ListBox1.ItemHeight = 15
         Me.ListBox1.Items.AddRange(New Object() {"", "", "* AnimalKing", "* Sssnake", "* TheLion07"})
-        Me.ListBox1.Location = New System.Drawing.Point(697, 549)
+        Me.ListBox1.Location = New System.Drawing.Point(609, 535)
         Me.ListBox1.MultiColumn = True
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(203, 124)
@@ -86,7 +86,7 @@ Partial Class QuizPageForm
         'Panel3
         '
         Me.Panel3.Controls.Add(Me.RichTextBox2)
-        Me.Panel3.Location = New System.Drawing.Point(320, 549)
+        Me.Panel3.Location = New System.Drawing.Point(232, 535)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(266, 124)
         Me.Panel3.TabIndex = 11
@@ -102,7 +102,7 @@ Partial Class QuizPageForm
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Panel4.Location = New System.Drawing.Point(300, 514)
+        Me.Panel4.Location = New System.Drawing.Point(212, 500)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(631, 2)
         Me.Panel4.TabIndex = 12
@@ -112,7 +112,7 @@ Partial Class QuizPageForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(958, 700)
+        Me.ClientSize = New System.Drawing.Size(913, 693)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.ListBox1)
