@@ -25,11 +25,15 @@ Public Class LoginForm
 
                 While reader.Read()
                     If reader(1) = passwordText Then
-                        MsgBox("Login successfull", MsgBoxStyle.Information)
-
                         My.Settings.userid = reader(0).ToString()
                         My.Settings.username = reader(2).ToString()
                         My.Settings.Save()
+
+                        ' Clear all test boxes
+                        Dim txtbox As Control
+                        For Each txtbox In Controls
+                            If TypeOf txtbox Is TextBox Then txtbox.Text = ""
+                        Next txtbox
 
                         My.Forms.indexForm.loadSession()
                         My.Forms.indexForm.SwitchPanel(LandingForm)

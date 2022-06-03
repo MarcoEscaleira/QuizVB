@@ -58,12 +58,12 @@ Partial Class AccountForm
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Location = New System.Drawing.Point(316, 12)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(284, 231)
+        Me.Panel2.Size = New System.Drawing.Size(284, 249)
         Me.Panel2.TabIndex = 5
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(316, 249)
+        Me.Button6.Location = New System.Drawing.Point(316, 267)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(96, 26)
         Me.Button6.TabIndex = 7

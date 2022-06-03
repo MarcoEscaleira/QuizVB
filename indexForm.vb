@@ -13,12 +13,18 @@
 
     Public Sub loadSession()
         If My.Settings.userid <> "" Then
-            goToLogin.Visible = False
-            goToRegistration.Visible = False
+            LoginBtn.Visible = False
+            RegisterBtn.Visible = False
             UserLabel.Visible = True
             UserLabel.Text = "Hello " + My.Settings.username + " !"
             logoutBtn.Visible = True
             profileBtn.Visible = True
+        Else
+            LoginBtn.Visible = True
+            RegisterBtn.Visible = True
+            UserLabel.Visible = False
+            logoutBtn.Visible = False
+            profileBtn.Visible = False
         End If
     End Sub
 
@@ -28,34 +34,29 @@
         loadSession()
     End Sub
 
-    Private Sub goToHome_Click(sender As Object, e As EventArgs) Handles goToHome.Click
+    Private Sub goToHome_Click(sender As Object, e As EventArgs) Handles HomeBtn.Click
         SwitchPanel(LandingForm)
     End Sub
 
-    Private Sub goToLogin_Click(sender As Object, e As EventArgs) Handles goToLogin.Click
+    Private Sub goToLogin_Click(sender As Object, e As EventArgs) Handles LoginBtn.Click
         SwitchPanel(LoginForm)
     End Sub
 
-    Private Sub goToRegistration_Click(sender As Object, e As EventArgs) Handles goToRegistration.Click
+    Private Sub goToRegistration_Click(sender As Object, e As EventArgs) Handles RegisterBtn.Click
         SwitchPanel(RegistrationForm)
     End Sub
 
-    Private Sub profileBtn_Click(sender As Object, e As EventArgs) Handles profileBtn.Click
+    Private Sub profileBtn_Click(sender As Object, e As EventArgs) Handles ProfileBtn.Click
         SwitchPanel(AccountForm)
     End Sub
 
-    Private Sub logoutBtn_Click(sender As Object, e As EventArgs) Handles logoutBtn.Click
+    Private Sub logoutBtn_Click(sender As Object, e As EventArgs) Handles LogoutBtn.Click
         My.Settings.userid = ""
         My.Settings.username = ""
         My.Settings.Save()
 
-        goToLogin.Visible = True
-        goToRegistration.Visible = True
-        UserLabel.Visible = False
-        logoutBtn.Visible = False
-        profileBtn.Visible = False
+        loadSession()
 
         MsgBox("Logged out with success!", MsgBoxStyle.Information)
     End Sub
-
 End Class
