@@ -24,17 +24,14 @@ Partial Class AccountForm
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.backBtn = New System.Windows.Forms.Button()
         Me.NameBox = New System.Windows.Forms.TextBox()
-        Me.CountryBox = New System.Windows.Forms.TextBox()
         Me.BirthdateBox = New System.Windows.Forms.TextBox()
         Me.DescriptionBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button8 = New System.Windows.Forms.Button()
+        Me.SaveBtn = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.EmailBox = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
@@ -61,15 +58,6 @@ Partial Class AccountForm
         Me.Panel2.Size = New System.Drawing.Size(284, 249)
         Me.Panel2.TabIndex = 5
         '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(316, 267)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(96, 26)
-        Me.Button6.TabIndex = 7
-        Me.Button6.Text = "Insert Image"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
         'backBtn
         '
         Me.backBtn.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
@@ -82,37 +70,26 @@ Partial Class AccountForm
         '
         'NameBox
         '
-        Me.NameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.NameBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.NameBox.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.NameBox.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.NameBox.Location = New System.Drawing.Point(316, 343)
         Me.NameBox.MaxLength = 256
         Me.NameBox.Name = "NameBox"
-        Me.NameBox.Size = New System.Drawing.Size(284, 25)
+        Me.NameBox.ReadOnly = True
+        Me.NameBox.Size = New System.Drawing.Size(284, 18)
         Me.NameBox.TabIndex = 10
-        '
-        'CountryBox
-        '
-        Me.CountryBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CountryBox.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.CountryBox.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.CountryBox.Location = New System.Drawing.Point(316, 614)
-        Me.CountryBox.MaxLength = 256
-        Me.CountryBox.Name = "CountryBox"
-        Me.CountryBox.ReadOnly = True
-        Me.CountryBox.Size = New System.Drawing.Size(284, 25)
-        Me.CountryBox.TabIndex = 13
         '
         'BirthdateBox
         '
-        Me.BirthdateBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.BirthdateBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.BirthdateBox.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.BirthdateBox.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.BirthdateBox.Location = New System.Drawing.Point(316, 552)
         Me.BirthdateBox.MaxLength = 256
         Me.BirthdateBox.Name = "BirthdateBox"
         Me.BirthdateBox.ReadOnly = True
-        Me.BirthdateBox.Size = New System.Drawing.Size(284, 25)
+        Me.BirthdateBox.Size = New System.Drawing.Size(284, 18)
         Me.BirthdateBox.TabIndex = 14
         '
         'DescriptionBox
@@ -153,23 +130,15 @@ Partial Class AccountForm
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "Birthdate"
         '
-        'Label4
+        'SaveBtn
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(316, 593)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(50, 15)
-        Me.Label4.TabIndex = 19
-        Me.Label4.Text = "Country"
-        '
-        'Button8
-        '
-        Me.Button8.Location = New System.Drawing.Point(504, 660)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(96, 30)
-        Me.Button8.TabIndex = 20
-        Me.Button8.Text = "Save Details"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SaveBtn.Location = New System.Drawing.Point(504, 605)
+        Me.SaveBtn.Name = "SaveBtn"
+        Me.SaveBtn.Size = New System.Drawing.Size(96, 30)
+        Me.SaveBtn.TabIndex = 20
+        Me.SaveBtn.Text = "Save Details"
+        Me.SaveBtn.UseVisualStyleBackColor = True
         '
         'Label5
         '
@@ -182,14 +151,14 @@ Partial Class AccountForm
         '
         'EmailBox
         '
-        Me.EmailBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.EmailBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.EmailBox.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.EmailBox.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.EmailBox.Location = New System.Drawing.Point(316, 483)
         Me.EmailBox.MaxLength = 256
         Me.EmailBox.Name = "EmailBox"
         Me.EmailBox.ReadOnly = True
-        Me.EmailBox.Size = New System.Drawing.Size(284, 25)
+        Me.EmailBox.Size = New System.Drawing.Size(284, 18)
         Me.EmailBox.TabIndex = 21
         '
         'AccountForm
@@ -199,17 +168,14 @@ Partial Class AccountForm
         Me.ClientSize = New System.Drawing.Size(929, 732)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.EmailBox)
-        Me.Controls.Add(Me.Button8)
-        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.SaveBtn)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DescriptionBox)
         Me.Controls.Add(Me.BirthdateBox)
-        Me.Controls.Add(Me.CountryBox)
         Me.Controls.Add(Me.NameBox)
         Me.Controls.Add(Me.backBtn)
-        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Button1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -221,17 +187,14 @@ Partial Class AccountForm
     End Sub
     Friend WithEvents Button1 As Button
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Button6 As Button
     Friend WithEvents backBtn As Button
     Friend WithEvents NameBox As TextBox
-    Friend WithEvents CountryBox As TextBox
     Friend WithEvents BirthdateBox As TextBox
     Friend WithEvents DescriptionBox As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Button8 As Button
+    Friend WithEvents SaveBtn As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents EmailBox As TextBox
 End Class

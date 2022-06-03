@@ -4,7 +4,15 @@ Public Class RegistrationForm
 
     End Sub
 
-    Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub clearTxtBox()
+        ' Clear all test boxes
+        Dim txtbox As Control
+        For Each txtbox In Controls
+            If TypeOf txtbox Is TextBox Then txtbox.Text = ""
+        Next txtbox
+    End Sub
+
+    Private Sub Create_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CreateBtn.Click
         Dim usernameText As String = UsernameBox.Text
         Dim emailText As String = EmailBox.Text
         Dim birthdayDate As Date = BirthdayBox.Text
@@ -33,11 +41,7 @@ Public Class RegistrationForm
                 If result = 1 Then
                     MsgBox("Created with success", MsgBoxStyle.Information)
 
-                    ' Clear all test boxes
-                    Dim txtbox As Control
-                    For Each txtbox In Controls
-                        If TypeOf txtbox Is TextBox Then txtbox.Text = ""
-                    Next txtbox
+                    clearTxtBox()
 
                     My.Forms.indexForm.SwitchPanel(LoginForm)
                 Else
@@ -51,4 +55,8 @@ Public Class RegistrationForm
         End Try
     End Sub
 
+    Private Sub CancelBtn_Click(sender As Object, e As EventArgs)
+        clearTxtBox()
+        My.Forms.indexForm.SwitchPanel(LandingForm)
+    End Sub
 End Class

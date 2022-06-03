@@ -57,6 +57,8 @@
 
         loadSession()
 
+        My.Forms.indexForm.SwitchPanel(LandingForm)
+
         MsgBox("Logged out with success!", MsgBoxStyle.Information)
     End Sub
 End Class

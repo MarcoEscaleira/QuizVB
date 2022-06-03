@@ -22,8 +22,7 @@ Partial Class RegistrationForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Dim CancelBtn As FontAwesome.Sharp.IconButton
         Me.UsernameBox = New System.Windows.Forms.TextBox()
         Me.EmailBox = New System.Windows.Forms.TextBox()
         Me.PasswordConfirmationBox = New System.Windows.Forms.TextBox()
@@ -35,44 +34,48 @@ Partial Class RegistrationForm
         Me.Label5 = New System.Windows.Forms.Label()
         Me.BirthdayBox = New System.Windows.Forms.DateTimePicker()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.CreateBtn = New FontAwesome.Sharp.IconButton()
+        CancelBtn = New FontAwesome.Sharp.IconButton()
         Me.SuspendLayout()
         '
-        'Button1
+        'CancelBtn
         '
-        Me.Button1.Location = New System.Drawing.Point(594, 503)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 31)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "OK"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(742, 503)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 31)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = True
+        CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        CancelBtn.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        CancelBtn.IconChar = FontAwesome.Sharp.IconChar.Napster
+        CancelBtn.IconColor = System.Drawing.Color.Black
+        CancelBtn.IconFont = FontAwesome.Sharp.IconFont.Solid
+        CancelBtn.IconSize = 20
+        CancelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        CancelBtn.Location = New System.Drawing.Point(595, 512)
+        CancelBtn.Name = "CancelBtn"
+        CancelBtn.Size = New System.Drawing.Size(92, 40)
+        CancelBtn.TabIndex = 7
+        CancelBtn.Text = "Cancel"
+        CancelBtn.UseVisualStyleBackColor = True
+        AddHandler CancelBtn.Click, AddressOf Me.CancelBtn_Click
         '
         'UsernameBox
         '
+        Me.UsernameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.UsernameBox.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.UsernameBox.Location = New System.Drawing.Point(594, 194)
         Me.UsernameBox.Name = "UsernameBox"
         Me.UsernameBox.Size = New System.Drawing.Size(222, 25)
-        Me.UsernameBox.TabIndex = 2
+        Me.UsernameBox.TabIndex = 1
         '
         'EmailBox
         '
+        Me.EmailBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.EmailBox.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.EmailBox.Location = New System.Drawing.Point(595, 255)
         Me.EmailBox.Name = "EmailBox"
         Me.EmailBox.Size = New System.Drawing.Size(222, 25)
-        Me.EmailBox.TabIndex = 3
+        Me.EmailBox.TabIndex = 2
         '
         'PasswordConfirmationBox
         '
+        Me.PasswordConfirmationBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PasswordConfirmationBox.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.PasswordConfirmationBox.Location = New System.Drawing.Point(595, 452)
         Me.PasswordConfirmationBox.MaxLength = 50
@@ -84,13 +87,14 @@ Partial Class RegistrationForm
         '
         'PasswordBox
         '
+        Me.PasswordBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PasswordBox.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.PasswordBox.Location = New System.Drawing.Point(594, 390)
         Me.PasswordBox.MaxLength = 50
         Me.PasswordBox.Name = "PasswordBox"
         Me.PasswordBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.PasswordBox.Size = New System.Drawing.Size(223, 25)
-        Me.PasswordBox.TabIndex = 6
+        Me.PasswordBox.TabIndex = 4
         Me.PasswordBox.UseSystemPasswordChar = True
         '
         'Label1
@@ -141,12 +145,13 @@ Partial Class RegistrationForm
         'BirthdayBox
         '
         Me.BirthdayBox.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.BirthdayBox.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.BirthdayBox.Location = New System.Drawing.Point(594, 326)
         Me.BirthdayBox.MaxDate = New Date(2022, 12, 31, 0, 0, 0, 0)
         Me.BirthdayBox.MinDate = New Date(1920, 1, 1, 0, 0, 0, 0)
         Me.BirthdayBox.Name = "BirthdayBox"
         Me.BirthdayBox.Size = New System.Drawing.Size(224, 25)
-        Me.BirthdayBox.TabIndex = 12
+        Me.BirthdayBox.TabIndex = 3
         Me.BirthdayBox.Value = New Date(2022, 3, 6, 0, 0, 0, 0)
         '
         'Panel1
@@ -158,11 +163,29 @@ Partial Class RegistrationForm
         Me.Panel1.Size = New System.Drawing.Size(441, 733)
         Me.Panel1.TabIndex = 13
         '
+        'CreateBtn
+        '
+        Me.CreateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CreateBtn.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.CreateBtn.IconChar = FontAwesome.Sharp.IconChar.PlusCircle
+        Me.CreateBtn.IconColor = System.Drawing.Color.Green
+        Me.CreateBtn.IconFont = FontAwesome.Sharp.IconFont.Solid
+        Me.CreateBtn.IconSize = 20
+        Me.CreateBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.CreateBtn.Location = New System.Drawing.Point(726, 512)
+        Me.CreateBtn.Name = "CreateBtn"
+        Me.CreateBtn.Size = New System.Drawing.Size(92, 40)
+        Me.CreateBtn.TabIndex = 6
+        Me.CreateBtn.Text = "Create"
+        Me.CreateBtn.UseVisualStyleBackColor = True
+        '
         'RegistrationForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(929, 732)
+        Me.Controls.Add(CancelBtn)
+        Me.Controls.Add(Me.CreateBtn)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BirthdayBox)
         Me.Controls.Add(Me.Label5)
@@ -174,8 +197,6 @@ Partial Class RegistrationForm
         Me.Controls.Add(Me.PasswordConfirmationBox)
         Me.Controls.Add(Me.EmailBox)
         Me.Controls.Add(Me.UsernameBox)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "RegistrationForm"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
@@ -184,9 +205,6 @@ Partial Class RegistrationForm
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents UsernameBox As TextBox
     Friend WithEvents EmailBox As TextBox
     Friend WithEvents PasswordConfirmationBox As TextBox
@@ -198,4 +216,6 @@ Partial Class RegistrationForm
     Friend WithEvents Label5 As Label
     Friend WithEvents BirthdayBox As DateTimePicker
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents CreateBtn As FontAwesome.Sharp.IconButton
+    Friend WithEvents CancelBtn As FontAwesome.Sharp.IconButton
 End Class
