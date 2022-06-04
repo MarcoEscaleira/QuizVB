@@ -6,7 +6,7 @@ Public Class LandingForm
 
         Try
             Using con As New SqlConnection(conString)
-                Dim command As New SqlCommand("SELECT quiz_id, quiz_title, quiz_questions_amount FROM Quizzes", con)
+                Dim command As New SqlCommand("SELECT quiz_id, quiz_title FROM Quizzes", con)
 
                 con.Open()
 
@@ -15,7 +15,6 @@ Public Class LandingForm
                 While reader.Read()
                     Dim quizTitle = reader(1)
                     Dim quizId = reader(0).ToString()
-                    Dim quizQuestions = reader(2)
 
                     Dim button = New Button()
                     Dim Generator = New Random()
@@ -25,8 +24,8 @@ Public Class LandingForm
 
                     ' Define button styles
                     With button
-                        .Text = String.Format("{0} - {1} Questions", quizTitle, quizQuestions)
-                        .Width = 100
+                        .Text = quizTitle
+                        .Width = 140
                         .FlatStyle = FlatStyle.Flat
                         .FlatAppearance.BorderSize = 1
                         .BackColor = Color.FromArgb(255, Generator.Next(startRange, endRange), Generator.Next(startRange, endRange), Generator.Next(startRange, endRange))
@@ -57,18 +56,6 @@ Public Class LandingForm
     End Sub
 
     Private Sub LandingForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Dim test = "Where are you from?|Jamaica|Portugal|Spain|1||Second question?|a|b|c|0"
-        'Dim questionsList = test.Split("||")
-
-        'For Each questionItem In questionsList
-        'Dim lastPos = questionItem.Length - 1
-
-        'Dim question = questionItem(1)
-        'Dim questionAnswer = questionItem(lastPos)
-
-        'MsgBox(question)
-        'Next
-
         loadQuizButtons()
     End Sub
 End Class

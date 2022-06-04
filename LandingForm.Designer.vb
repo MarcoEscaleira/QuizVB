@@ -45,7 +45,7 @@ Partial Class LandingForm
         Me.ButtonsPanel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.ButtonsPanel.Location = New System.Drawing.Point(111, 312)
         Me.ButtonsPanel.Name = "ButtonsPanel"
-        Me.ButtonsPanel.Size = New System.Drawing.Size(710, 100)
+        Me.ButtonsPanel.Size = New System.Drawing.Size(710, 144)
         Me.ButtonsPanel.TabIndex = 5
         '
         'Panel1

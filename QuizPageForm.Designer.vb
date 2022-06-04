@@ -22,7 +22,6 @@ Partial Class QuizPageForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -31,21 +30,17 @@ Partial Class QuizPageForm
         Me.BackBtn = New FontAwesome.Sharp.IconButton()
         Me.DescriptionLabel = New System.Windows.Forms.Label()
         Me.TitleLabel = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.QuestionsLabel = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.QuizCategoryLabel = New System.Windows.Forms.Label()
+        Me.DateLabel = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.UserLabel = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.PlayBtn = New FontAwesome.Sharp.IconButton()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.Orange
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(645, 177)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(124, 92)
-        Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Play"
-        Me.Button3.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -89,8 +84,8 @@ Partial Class QuizPageForm
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Panel4.Location = New System.Drawing.Point(169, 362)
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel4.Location = New System.Drawing.Point(169, 371)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(600, 2)
         Me.Panel4.TabIndex = 12
@@ -115,7 +110,7 @@ Partial Class QuizPageForm
         Me.DescriptionLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.DescriptionLabel.Location = New System.Drawing.Point(169, 163)
         Me.DescriptionLabel.Name = "DescriptionLabel"
-        Me.DescriptionLabel.Size = New System.Drawing.Size(391, 176)
+        Me.DescriptionLabel.Size = New System.Drawing.Size(391, 157)
         Me.DescriptionLabel.TabIndex = 15
         Me.DescriptionLabel.Text = "DescriptionLabel"
         '
@@ -129,12 +124,120 @@ Partial Class QuizPageForm
         Me.TitleLabel.Text = "Title Label"
         Me.TitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Location = New System.Drawing.Point(641, 153)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(78, 19)
+        Me.Label2.TabIndex = 16
+        Me.Label2.Text = "Questions: "
+        '
+        'QuestionsLabel
+        '
+        Me.QuestionsLabel.AutoSize = True
+        Me.QuestionsLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.QuestionsLabel.Location = New System.Drawing.Point(750, 150)
+        Me.QuestionsLabel.Name = "QuestionsLabel"
+        Me.QuestionsLabel.Size = New System.Drawing.Size(19, 21)
+        Me.QuestionsLabel.TabIndex = 17
+        Me.QuestionsLabel.Text = "1"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.Location = New System.Drawing.Point(169, 332)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(72, 19)
+        Me.Label3.TabIndex = 18
+        Me.Label3.Text = "Category: "
+        '
+        'QuizCategoryLabel
+        '
+        Me.QuizCategoryLabel.AutoSize = True
+        Me.QuizCategoryLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.QuizCategoryLabel.Location = New System.Drawing.Point(235, 330)
+        Me.QuizCategoryLabel.Name = "QuizCategoryLabel"
+        Me.QuizCategoryLabel.Size = New System.Drawing.Size(35, 21)
+        Me.QuizCategoryLabel.TabIndex = 19
+        Me.QuizCategoryLabel.Text = "Cat"
+        '
+        'DateLabel
+        '
+        Me.DateLabel.AutoSize = True
+        Me.DateLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.DateLabel.Location = New System.Drawing.Point(681, 333)
+        Me.DateLabel.Name = "DateLabel"
+        Me.DateLabel.Size = New System.Drawing.Size(44, 21)
+        Me.DateLabel.TabIndex = 21
+        Me.DateLabel.Text = "date"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label5.Location = New System.Drawing.Point(610, 335)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(81, 19)
+        Me.Label5.TabIndex = 20
+        Me.Label5.Text = "Created on "
+        '
+        'UserLabel
+        '
+        Me.UserLabel.AutoSize = True
+        Me.UserLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.UserLabel.Location = New System.Drawing.Point(455, 331)
+        Me.UserLabel.Name = "UserLabel"
+        Me.UserLabel.Size = New System.Drawing.Size(44, 21)
+        Me.UserLabel.TabIndex = 23
+        Me.UserLabel.Text = "User"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label6.Location = New System.Drawing.Point(382, 333)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(80, 19)
+        Me.Label6.TabIndex = 22
+        Me.Label6.Text = "Created by "
+        '
+        'PlayBtn
+        '
+        Me.PlayBtn.BackColor = System.Drawing.Color.Green
+        Me.PlayBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PlayBtn.Flip = FontAwesome.Sharp.FlipOrientation.Vertical
+        Me.PlayBtn.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.PlayBtn.ForeColor = System.Drawing.Color.White
+        Me.PlayBtn.IconChar = FontAwesome.Sharp.IconChar.Play
+        Me.PlayBtn.IconColor = System.Drawing.Color.White
+        Me.PlayBtn.IconFont = FontAwesome.Sharp.IconFont.Solid
+        Me.PlayBtn.IconSize = 24
+        Me.PlayBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.PlayBtn.Location = New System.Drawing.Point(645, 185)
+        Me.PlayBtn.Name = "PlayBtn"
+        Me.PlayBtn.Size = New System.Drawing.Size(124, 92)
+        Me.PlayBtn.TabIndex = 24
+        Me.PlayBtn.Text = "Play"
+        Me.PlayBtn.UseVisualStyleBackColor = False
+        '
         'QuizPageForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(929, 732)
+        Me.Controls.Add(Me.PlayBtn)
+        Me.Controls.Add(Me.UserLabel)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.DateLabel)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.QuizCategoryLabel)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.QuestionsLabel)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TitleLabel)
         Me.Controls.Add(Me.DescriptionLabel)
         Me.Controls.Add(Me.BackBtn)
@@ -142,15 +245,14 @@ Partial Class QuizPageForm
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "QuizPageForm"
         Me.Text = "Quiz Page"
         Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Button3 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Panel3 As Panel
@@ -159,4 +261,13 @@ Partial Class QuizPageForm
     Friend WithEvents BackBtn As FontAwesome.Sharp.IconButton
     Friend WithEvents DescriptionLabel As Label
     Friend WithEvents TitleLabel As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents QuestionsLabel As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents QuizCategoryLabel As Label
+    Friend WithEvents DateLabel As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents UserLabel As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents PlayBtn As FontAwesome.Sharp.IconButton
 End Class

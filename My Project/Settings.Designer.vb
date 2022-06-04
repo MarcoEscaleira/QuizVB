@@ -100,6 +100,30 @@ Namespace My
                 Me("selectedQuiz") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property questionNumber() As Integer
+            Get
+                Return CType(Me("questionNumber"),Integer)
+            End Get
+            Set
+                Me("questionNumber") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property quizQuestions() As String
+            Get
+                Return CType(Me("quizQuestions"),String)
+            End Get
+            Set
+                Me("quizQuestions") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
