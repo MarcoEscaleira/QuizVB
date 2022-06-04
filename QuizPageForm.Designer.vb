@@ -22,53 +22,40 @@ Partial Class QuizPageForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(QuizPageForm))
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.BackBtn = New FontAwesome.Sharp.IconButton()
+        Me.DescriptionLabel = New System.Windows.Forms.Label()
+        Me.TitleLabel = New System.Windows.Forms.Label()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Panel2
-        '
-        Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
-        Me.Panel2.Location = New System.Drawing.Point(232, 35)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(599, 209)
-        Me.Panel2.TabIndex = 5
         '
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.Orange
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button3.Location = New System.Drawing.Point(682, 312)
+        Me.Button3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(645, 177)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(149, 116)
+        Me.Button3.Size = New System.Drawing.Size(124, 92)
         Me.Button3.TabIndex = 6
         Me.Button3.Text = "Play"
         Me.Button3.UseVisualStyleBackColor = False
         '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(232, 282)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(356, 182)
-        Me.RichTextBox1.TabIndex = 8
-        Me.RichTextBox1.Text = ""
-        '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(232, 264)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(169, 128)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(67, 15)
+        Me.Label1.Size = New System.Drawing.Size(391, 20)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Description"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'ListBox1
         '
@@ -76,7 +63,7 @@ Partial Class QuizPageForm
         Me.ListBox1.ImeMode = System.Windows.Forms.ImeMode.[On]
         Me.ListBox1.ItemHeight = 15
         Me.ListBox1.Items.AddRange(New Object() {"", "", "* AnimalKing", "* Sssnake", "* TheLion07"})
-        Me.ListBox1.Location = New System.Drawing.Point(609, 535)
+        Me.ListBox1.Location = New System.Drawing.Point(566, 397)
         Me.ListBox1.MultiColumn = True
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(203, 124)
@@ -86,14 +73,15 @@ Partial Class QuizPageForm
         'Panel3
         '
         Me.Panel3.Controls.Add(Me.RichTextBox2)
-        Me.Panel3.Location = New System.Drawing.Point(232, 535)
+        Me.Panel3.Location = New System.Drawing.Point(170, 397)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(266, 124)
         Me.Panel3.TabIndex = 11
         '
         'RichTextBox2
         '
-        Me.RichTextBox2.Location = New System.Drawing.Point(3, 3)
+        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox2.Location = New System.Drawing.Point(67, 44)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.Size = New System.Drawing.Size(141, 43)
         Me.RichTextBox2.TabIndex = 0
@@ -102,37 +90,73 @@ Partial Class QuizPageForm
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Panel4.Location = New System.Drawing.Point(212, 500)
+        Me.Panel4.Location = New System.Drawing.Point(169, 362)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(631, 2)
+        Me.Panel4.Size = New System.Drawing.Size(600, 2)
         Me.Panel4.TabIndex = 12
+        '
+        'BackBtn
+        '
+        Me.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BackBtn.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.BackBtn.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.BackBtn.IconColor = System.Drawing.Color.Black
+        Me.BackBtn.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.BackBtn.Location = New System.Drawing.Point(829, 35)
+        Me.BackBtn.Name = "BackBtn"
+        Me.BackBtn.Size = New System.Drawing.Size(75, 35)
+        Me.BackBtn.TabIndex = 13
+        Me.BackBtn.Text = "Back"
+        Me.BackBtn.UseVisualStyleBackColor = True
+        '
+        'DescriptionLabel
+        '
+        Me.DescriptionLabel.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.DescriptionLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.DescriptionLabel.Location = New System.Drawing.Point(169, 163)
+        Me.DescriptionLabel.Name = "DescriptionLabel"
+        Me.DescriptionLabel.Size = New System.Drawing.Size(391, 176)
+        Me.DescriptionLabel.TabIndex = 15
+        Me.DescriptionLabel.Text = "DescriptionLabel"
+        '
+        'TitleLabel
+        '
+        Me.TitleLabel.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.TitleLabel.Location = New System.Drawing.Point(169, 35)
+        Me.TitleLabel.Name = "TitleLabel"
+        Me.TitleLabel.Size = New System.Drawing.Size(600, 43)
+        Me.TitleLabel.TabIndex = 0
+        Me.TitleLabel.Text = "Title Label"
+        Me.TitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'QuizPageForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(913, 693)
+        Me.ClientSize = New System.Drawing.Size(929, 732)
+        Me.Controls.Add(Me.TitleLabel)
+        Me.Controls.Add(Me.DescriptionLabel)
+        Me.Controls.Add(Me.BackBtn)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Panel2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "QuizPageForm"
-        Me.Text = "Form2"
+        Me.Text = "Quiz Page"
         Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents Button3 As Button
-    Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents RichTextBox2 As RichTextBox
     Friend WithEvents Panel4 As Panel
+    Friend WithEvents BackBtn As FontAwesome.Sharp.IconButton
+    Friend WithEvents DescriptionLabel As Label
+    Friend WithEvents TitleLabel As Label
 End Class

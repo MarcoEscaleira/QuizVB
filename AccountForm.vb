@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class AccountForm
-    Private Sub loadUserDetails()
+    Public Sub loadUserDetails()
         Dim conString As String = "Data Source=dmu-marco.database.windows.net;Initial Catalog=quizDB;Persist Security Info=True;User ID=todoAdmin;Password=mDuCQAmVMpxAJ6vmGq9P"
 
         Try

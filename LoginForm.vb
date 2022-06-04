@@ -36,6 +36,7 @@ Public Class LoginForm
                         Next txtbox
 
                         My.Forms.indexForm.loadSession()
+                        My.Forms.AccountForm.loadUserDetails()
                         My.Forms.indexForm.SwitchPanel(LandingForm)
                     Else
                         MsgBox("Password is incorrect.", MsgBoxStyle.Critical)
