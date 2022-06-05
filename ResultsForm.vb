@@ -38,7 +38,9 @@ Public Class ResultsForm
                     End If
                 End While
 
-                ResetResult()
+                submitUserResult()
+
+                'ResetResult()
 
                 con.Close()
             End Using
@@ -53,21 +55,44 @@ Public Class ResultsForm
         My.Settings.Save()
     End Sub
 
-    Private Sub HomeBtn_Click(sender As Object, e As EventArgs) Handles HomeBtn.Click
-        ' TODO: save results to table
+    Private Sub submitUserResult()
+        Dim conString As String = "Data Source=dmu-marco.database.windows.net;Initial Catalog=quizDB;Persist Security Info=True;User ID=todoAdmin;Password=mDuCQAmVMpxAJ6vmGq9P"
 
+        Try
+            Using con As New SqlConnection(conString)
+                Dim quizId = My.Settings.selectedQuiz
+                Dim userId = My.Settings.userid
+                Dim questionsAnswered = My.Settings.quizResult
+
+                Dim insertQuery = String.Format("INSERT INTO Results (quiz_id, user_id, result_answers) VALUES ('{0}', '{1}', '{2}')", quizId, userId, questionsAnswered)
+                Dim command As New SqlCommand(insertQuery, con)
+
+                con.Open()
+
+                Dim result As Integer = command.ExecuteNonQuery()
+
+                If result <> 1 Then
+                    MsgBox("Error while saving your result", MsgBoxStyle.Critical)
+                End If
+
+                con.Close()
+            End Using
+        Catch ex As Exception
+            MsgBox("Something went wrong...", ex.Message, MsgBoxStyle.Critical)
+        End Try
+    End Sub
+
+    Private Sub HomeBtn_Click(sender As Object, e As EventArgs) Handles HomeBtn.Click
         My.Forms.indexForm.SwitchPanel(LandingForm)
     End Sub
 
     Private Sub TryAgainBtn_Click(sender As Object, e As EventArgs) Handles TryAgainBtn.Click
-        ' TODO: save results to table
-
         My.Forms.QuizPageForm.loadSelectedQuiz()
 
         My.Forms.indexForm.SwitchPanel(QuizPageForm)
     End Sub
 
     Private Sub ResultsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        loadSelectedQuizResults()
+
     End Sub
 End Class

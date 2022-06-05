@@ -37,7 +37,7 @@ Public Class AccountForm
 
         Try
             Using con As New SqlConnection(conString)
-                Dim editQuery = String.Format("UPDATE Users SET user_description = '{1}' WHERE user_id = '{2}'", DescriptionBox.Text, My.Settings.userid)
+                Dim editQuery = String.Format("UPDATE Users SET user_description = '{0}' WHERE user_id = '{1}'", DescriptionBox.Text, My.Settings.userid)
                 Dim command As New SqlCommand(editQuery, con)
 
                 con.Open()
