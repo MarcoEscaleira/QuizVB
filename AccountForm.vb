@@ -12,13 +12,13 @@ Public Class AccountForm
 
                 Dim reader As SqlDataReader = command.ExecuteReader()
 
+                'Check when results come from the DB
                 While reader.Read()
-
+                    ' Update fields with the row data
                     NameBox.Text = reader(1).ToString()
                     DescriptionBox.Text = reader(5).ToString()
                     EmailBox.Text = reader(2).ToString()
                     BirthdateBox.Text = reader(3).ToString()
-
                 End While
 
                 con.Close()

@@ -12,6 +12,7 @@ Public Class LandingForm
 
                 Dim reader As SqlDataReader = command.ExecuteReader()
 
+                ' Check when results come from database
                 While reader.Read()
                     Dim quizTitle = reader(1)
                     Dim quizId = reader(0).ToString()

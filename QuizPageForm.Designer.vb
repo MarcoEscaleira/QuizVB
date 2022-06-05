@@ -23,9 +23,6 @@ Partial Class QuizPageForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.BackBtn = New FontAwesome.Sharp.IconButton()
         Me.DescriptionLabel = New System.Windows.Forms.Label()
@@ -39,7 +36,8 @@ Partial Class QuizPageForm
         Me.UserLabel = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.PlayBtn = New FontAwesome.Sharp.IconButton()
-        Me.Panel3.SuspendLayout()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.ResultsLabel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -51,36 +49,6 @@ Partial Class QuizPageForm
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Description"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ImeMode = System.Windows.Forms.ImeMode.[On]
-        Me.ListBox1.ItemHeight = 15
-        Me.ListBox1.Items.AddRange(New Object() {"", "", "* AnimalKing", "* Sssnake", "* TheLion07"})
-        Me.ListBox1.Location = New System.Drawing.Point(566, 397)
-        Me.ListBox1.MultiColumn = True
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(203, 124)
-        Me.ListBox1.Sorted = True
-        Me.ListBox1.TabIndex = 10
-        '
-        'Panel3
-        '
-        Me.Panel3.Controls.Add(Me.RichTextBox2)
-        Me.Panel3.Location = New System.Drawing.Point(170, 397)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(266, 124)
-        Me.Panel3.TabIndex = 11
-        '
-        'RichTextBox2
-        '
-        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RichTextBox2.Location = New System.Drawing.Point(67, 44)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(141, 43)
-        Me.RichTextBox2.TabIndex = 0
-        Me.RichTextBox2.Text = "Your recent results for this quiz: 12/16"
         '
         'Panel4
         '
@@ -223,12 +191,36 @@ Partial Class QuizPageForm
         Me.PlayBtn.Text = "Play"
         Me.PlayBtn.UseVisualStyleBackColor = False
         '
+        'Label4
+        '
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.Label4.Location = New System.Drawing.Point(169, 376)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(600, 37)
+        Me.Label4.TabIndex = 25
+        Me.Label4.Text = "Your recent results on this quiz"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'ResultsLabel
+        '
+        Me.ResultsLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ResultsLabel.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.ResultsLabel.Location = New System.Drawing.Point(169, 427)
+        Me.ResultsLabel.Name = "ResultsLabel"
+        Me.ResultsLabel.Size = New System.Drawing.Size(600, 203)
+        Me.ResultsLabel.TabIndex = 26
+        Me.ResultsLabel.Text = "N/A"
+        Me.ResultsLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
         'QuizPageForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(929, 732)
+        Me.Controls.Add(Me.ResultsLabel)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.PlayBtn)
         Me.Controls.Add(Me.UserLabel)
         Me.Controls.Add(Me.Label6)
@@ -242,21 +234,15 @@ Partial Class QuizPageForm
         Me.Controls.Add(Me.DescriptionLabel)
         Me.Controls.Add(Me.BackBtn)
         Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "QuizPageForm"
         Me.Text = "Quiz Page"
-        Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As Label
-    Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents RichTextBox2 As RichTextBox
     Friend WithEvents Panel4 As Panel
     Friend WithEvents BackBtn As FontAwesome.Sharp.IconButton
     Friend WithEvents DescriptionLabel As Label
@@ -270,4 +256,6 @@ Partial Class QuizPageForm
     Friend WithEvents UserLabel As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents PlayBtn As FontAwesome.Sharp.IconButton
+    Friend WithEvents Label4 As Label
+    Friend WithEvents ResultsLabel As Label
 End Class

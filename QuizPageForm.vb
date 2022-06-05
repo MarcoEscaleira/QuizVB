@@ -7,6 +7,8 @@ Public Class QuizPageForm
 
         Try
             Using con As New SqlConnection(conString)
+
+                'Get quiz data
                 Dim quizQuery = String.Format("
                     SELECT Quizzes.quiz_title, Quizzes.quiz_description, Quizzes.quiz_category, Quizzes.quiz_questions_amount , Quizzes.quiz_timecreated, Users.user_username 
                     FROM Quizzes 
@@ -35,6 +37,37 @@ Public Class QuizPageForm
                     UserLabel.Text = quizCreatorName
 
                 End While
+
+                con.Close()
+
+                'Get user results
+                Dim resultsQuery = String.Format("
+                    SELECT Results.result_answers , Quizzes.quiz_questions_amount, Results.result_date
+                    FROM Results 
+                    INNER JOIN Quizzes ON Results.quiz_id = Quizzes.quiz_id
+                    WHERE Results.user_id = {0} AND Results.quiz_id = {1}
+                ", My.Settings.userid, My.Settings.selectedQuiz)
+                Dim resultsCommand As New SqlCommand(resultsQuery, con)
+
+                con.Open()
+
+                Dim resultsReader As SqlDataReader = resultsCommand.ExecuteReader()
+
+                ResultsLabel.Text = ""
+                Dim counter = 0
+                While resultsReader.Read()
+                    Dim userAnswers = resultsReader(0)
+                    Dim quizTotalAnswers = resultsReader(1)
+                    Dim resultDate = resultsReader(2).ToString().Split("12")(0)
+
+                    ResultsLabel.Text = ResultsLabel.Text & vbCrLf & String.Format("Answered {0} out of {1} questions on {2}", userAnswers, quizTotalAnswers, resultDate)
+
+                    counter = counter + 1
+                End While
+
+                If counter = 0 Then
+                    ResultsLabel.Text = "N/A"
+                End If
 
                 con.Close()
             End Using
