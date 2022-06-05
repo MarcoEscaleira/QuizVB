@@ -60,7 +60,7 @@ Public Class QuizPageForm
                     While resultsReader.Read()
                         Dim userAnswers = resultsReader(0)
                         Dim quizTotalAnswers = resultsReader(1)
-                        Dim resultDate = resultsReader(2).ToString().Split("12")(0)
+                        Dim resultDate = resultsReader(2).ToString().Split(" ")(0)
 
                         ResultsLabel.Text = ResultsLabel.Text & vbCrLf & String.Format("Answered {0} out of {1} questions on {2}", userAnswers, quizTotalAnswers, resultDate)
 
