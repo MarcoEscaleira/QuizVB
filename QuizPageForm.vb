@@ -40,36 +40,39 @@ Public Class QuizPageForm
 
                 con.Close()
 
-                'Get user results
-                Dim resultsQuery = String.Format("
+                'Check if user is logged in to get results
+                If My.Settings.userid <> "" Then
+                    'Get user results
+                    Dim resultsQuery = String.Format("
                     SELECT Results.result_answers , Quizzes.quiz_questions_amount, Results.result_date
                     FROM Results 
                     INNER JOIN Quizzes ON Results.quiz_id = Quizzes.quiz_id
                     WHERE Results.user_id = {0} AND Results.quiz_id = {1}
                 ", My.Settings.userid, My.Settings.selectedQuiz)
-                Dim resultsCommand As New SqlCommand(resultsQuery, con)
+                    Dim resultsCommand As New SqlCommand(resultsQuery, con)
 
-                con.Open()
+                    con.Open()
 
-                Dim resultsReader As SqlDataReader = resultsCommand.ExecuteReader()
+                    Dim resultsReader As SqlDataReader = resultsCommand.ExecuteReader()
 
-                ResultsLabel.Text = ""
-                Dim counter = 0
-                While resultsReader.Read()
-                    Dim userAnswers = resultsReader(0)
-                    Dim quizTotalAnswers = resultsReader(1)
-                    Dim resultDate = resultsReader(2).ToString().Split("12")(0)
+                    ResultsLabel.Text = ""
+                    Dim counter = 0
+                    While resultsReader.Read()
+                        Dim userAnswers = resultsReader(0)
+                        Dim quizTotalAnswers = resultsReader(1)
+                        Dim resultDate = resultsReader(2).ToString().Split("12")(0)
 
-                    ResultsLabel.Text = ResultsLabel.Text & vbCrLf & String.Format("Answered {0} out of {1} questions on {2}", userAnswers, quizTotalAnswers, resultDate)
+                        ResultsLabel.Text = ResultsLabel.Text & vbCrLf & String.Format("Answered {0} out of {1} questions on {2}", userAnswers, quizTotalAnswers, resultDate)
 
-                    counter = counter + 1
-                End While
+                        counter = counter + 1
+                    End While
 
-                If counter = 0 Then
-                    ResultsLabel.Text = "N/A"
+                    If counter = 0 Then
+                        ResultsLabel.Text = "N/A"
+                    End If
+
+                    con.Close()
                 End If
-
-                con.Close()
             End Using
         Catch ex As Exception
             MsgBox("Something went wrong...", ex.Message, MsgBoxStyle.Critical)
@@ -81,6 +84,12 @@ Public Class QuizPageForm
     End Sub
 
     Private Sub PlayButton_Click(sender As Object, e As EventArgs) Handles PlayBtn.Click
+        'Check if user is logged in to get results
+        If My.Settings.userid = "" Then
+            MsgBox("Please login first.", MsgBoxStyle.Critical)
+            Return
+        End If
+
         My.Settings.questionNumber = 0
         My.Settings.Save()
 
