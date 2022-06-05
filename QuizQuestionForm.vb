@@ -2,6 +2,8 @@
 
 Public Class QuizQuestionForm
     Public Sub loadSelectedQuiz()
+        clearButtons()
+
         Dim conString As String = "Data Source=dmu-marco.database.windows.net;Initial Catalog=quizDB;Persist Security Info=True;User ID=todoAdmin;Password=mDuCQAmVMpxAJ6vmGq9P"
 
         Try
@@ -23,6 +25,8 @@ Public Class QuizQuestionForm
                     QuestionsTotal.Text = quizTotalQuestions
 
                     My.Settings.quizQuestions = quizQuestions
+                    My.Settings.quizResult = 0
+                    My.Settings.questionNumber = 0
                     My.Settings.Save()
 
                 End While
@@ -66,9 +70,11 @@ Public Class QuizQuestionForm
         Dim questionNumber = My.Settings.questionNumber
         CurrentLabel.Text = questionNumber + 1
 
-        'Check if final question was reached
+        'Check if final question has been reached
         If questionNumber = Convert.ToInt32(QuestionsTotal.Text) Then
-            MessageBox.Show("Last question reached")
+            My.Forms.ResultsForm.loadSelectedQuizResults()
+            My.Forms.indexForm.SwitchPanel(ResultsForm)
+
             Return
         End If
 
@@ -109,6 +115,9 @@ Public Class QuizQuestionForm
                                                ' Check if user got the correct answer
                                                If currentQuestionIndex = Convert.ToInt32(questionCorrectAnswer) Then
                                                    MsgBox("Yay, correct answer!", MsgBoxStyle.Information)
+                                                   ' Update user score
+                                                   My.Settings.quizResult = My.Settings.quizResult + 1
+                                                   My.Settings.Save()
                                                Else
                                                    MsgBox("Upss, you got it wrong", MsgBoxStyle.Critical)
                                                End If

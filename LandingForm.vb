@@ -38,6 +38,8 @@ Public Class LandingForm
 
                                                  ' Update selectedQuiz variable to the clicked quiz to be loaded on the quiz page
                                                  My.Settings.selectedQuiz = quizId
+                                                 My.Settings.questionNumber = 0
+                                                 My.Settings.quizResult = 0
                                                  My.Settings.Save()
 
                                                  My.Forms.QuizPageForm.loadSelectedQuiz()
